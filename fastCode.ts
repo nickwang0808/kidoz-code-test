@@ -34,21 +34,14 @@ function yearsSince(startDate: Date, endDate: Date): number {
 }
 
 function transformToHashmap(
-  // payroll: Payroll[],
   addresses: AddressBook[],
   employees: Employee[]
 ): {
-  // payrollsRecord: Record<string, Payroll>;
   addressBookRecord: Record<string, AddressBook>;
   employeesRecord: Record<string, Employee>;
 } {
-  // const payrollsRecord: Record<string, Payroll> = {};
   const addressBookRecord: Record<string, AddressBook> = {};
   const employeesRecord: Record<string, Employee> = {};
-
-  // payroll.forEach((payroll) => {
-  //   payrollsRecord[payroll.emp_id] = payroll;
-  // });
 
   addresses.forEach((address) => {
     addressBookRecord[address.emp_id] = address;
@@ -59,7 +52,6 @@ function transformToHashmap(
   });
 
   return {
-    // payrollsRecord,
     addressBookRecord,
     employeesRecord,
   };
